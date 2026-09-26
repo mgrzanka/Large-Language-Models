@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# runtime artefacts
+wandb/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# course-distributed data (not redistributed)
+07-llm-agents/clinics.csv
+07-llm-agents/clinic_reviews.csv
+
+.DS_Store

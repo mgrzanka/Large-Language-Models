@@ -1,0 +1,32 @@
+# Core
+torch
+numpy
+pandas
+scikit-learn
+
+# Hugging Face
+transformers
+datasets
+peft
+accelerate
+bitsandbytes
+
+# 04 - retrieval
+sentence-transformers
+rank_bm25
+
+# 06 - vision backbones
+timm
+torchvision
+
+# 07 - agents
+langchain
+langchain-community
+langchain-core
+langgraph
+
+# Metrics / tracking / plots
+torchmetrics
+wandb
+matplotlib
+seaborn
