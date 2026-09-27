@@ -1,4 +1,4 @@
-# 06 — CLIP: Vision–Language Representation Learning
+# 06 - CLIP: Vision–Language Representation Learning
 
 A multimodal model trained contrastively to place images and their captions in one shared embedding space, then used for image-to-image and text-to-image retrieval. Dataset: Flickr30k.
 
@@ -14,7 +14,7 @@ Both projection heads map into the same dimensionality: linear → GELU → line
 
 ## The contrastive loss
 
-Temperature-scaled. For a batch of *N* (image, caption) pairs, the matching pair must score higher than every mismatched combination in that batch — **negatives come from the batch itself**, which is why contrastive training benefits from large batches and why no explicit negative sampling is needed.
+Temperature-scaled. For a batch of _N_ (image, caption) pairs, the matching pair must score higher than every mismatched combination in that batch - **negatives come from the batch itself**, which is why contrastive training benefits from large batches and why no explicit negative sampling is needed.
 
 ## Training
 
@@ -22,9 +22,9 @@ Separate learning rates per sub-network (a pretrained backbone should not be dra
 
 ## What it is used for
 
-1. **Pair similarity** — embed two examples and compare all four image/caption combinations; matched pairs should dominate.
-2. **Image-to-image retrieval** — embed the whole test set once, then *k*-nearest neighbours in the shared space.
-3. **Text-to-image retrieval** — a natural-language query goes through the *text* encoder and is compared against *image* embeddings. This is the capability the shared space exists for: the query never touches an image model.
+1. **Pair similarity** - embed two examples and compare all four image/caption combinations; matched pairs should dominate.
+2. **Image-to-image retrieval** - embed the whole test set once, then _k_-nearest neighbours in the shared space.
+3. **Text-to-image retrieval** - a natural-language query goes through the _text_ encoder and is compared against _image_ embeddings. This is the capability the shared space exists for: the query never touches an image model.
 
 ## Provenance
 

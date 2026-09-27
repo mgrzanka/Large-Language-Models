@@ -2,7 +2,7 @@
 
 **Seven labs from the _Wielkie Modele Językowe_ (LLM) course** at Warsaw University of Technology, covering the stack end to end: from TF-IDF baselines, through building a decoder-only transformer from scratch, to parameter-efficient fine-tuning, retrieval-augmented generation, multimodal CLIP and agent systems.
 
-Each lab is a single notebook with its outputs preserved — training logs, generated text, retrieved documents and plots are all still in the cells.
+Each lab is a single notebook with its outputs preserved - training logs, generated text, retrieved documents and plots are all still in the cells.
 
 ---
 
@@ -18,11 +18,11 @@ Each lab is a single notebook with its outputs preserved — training logs, gene
 
 ## Detailed descriptions
 
-**[03 — PEFT adaptation](03-peft-adaptation)** puts five adaptation strategies side by side on one task and one prompt: few-shot prompting (nothing trained), LoRA adapters in the attention layers, prompt tuning, prefix-tuning and P-tuning with an LSTM prompt encoder. The comparison is what makes it useful — the same dataset, the same base model, the same generation call, only the adaptation mechanism changes.
+**[03 - PEFT adaptation](03-peft-adaptation)** puts five adaptation strategies side by side on one task and one prompt: few-shot prompting (nothing trained), LoRA adapters in the attention layers, prompt tuning, prefix-tuning and P-tuning with an LSTM prompt encoder. The comparison is what makes it useful - the same dataset, the same base model, the same generation call, only the adaptation mechanism changes.
 
-**[04 — Hybrid retrieval](04-hybrid-retrieval)** builds a retriever rather than calling one. Lexical search (BM25 with Polish stop words), dense search (bi-encoder), and a cross-encoder that reranks the union of both candidate pools. Polish Wikipedia is chunked into 50k overlapping passages so a sentence cut at a chunk boundary is not lost, and the result feeds a prompt that forces `[document_number]` citations.
+**[04 - Hybrid retrieval](04-hybrid-retrieval)** builds a retriever rather than calling one. Lexical search (BM25 with Polish stop words), dense search (bi-encoder), and a cross-encoder that reranks the union of both candidate pools. Polish Wikipedia is chunked into 50k overlapping passages so a sentence cut at a chunk boundary is not lost, and the result feeds a prompt that forces `[document_number]` citations.
 
-**[06 — CLIP](06-clip-vision-language)** trains a multimodal model contrastively: DistilBERT text encoder, ResNet50 image encoder, a projection head per modality into a shared space, and a temperature-scaled contrastive loss whose negatives come from the batch itself. Then it uses the result for image-to-image and text-to-image retrieval.
+**[06 - CLIP](06-clip-vision-language)** trains a multimodal model contrastively: DistilBERT text encoder, ResNet50 image encoder, a projection head per modality into a shared space, and a temperature-scaled contrastive loss whose negatives come from the batch itself. Then it uses the result for image-to-image and text-to-image retrieval.
 
 ## Layout
 
